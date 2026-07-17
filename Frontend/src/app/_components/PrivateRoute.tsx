@@ -12,8 +12,8 @@ const PrivateRoute = ({ children }: PrivateRouteProps) => {
 
   useEffect(() => {
     if (!currentUser) {
-      // Redirect to the sign-in page if not authenticated
-      router.push("/login");
+      // Redirect to the home page if not authenticated
+      router.push("/");
     }
   }, [currentUser, router]);
 
