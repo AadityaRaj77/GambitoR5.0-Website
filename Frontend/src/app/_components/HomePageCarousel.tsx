@@ -29,7 +29,7 @@ const HomePageCarousel: React.FC = () => {
       id="TESTIMONIAL"
       className="relative z-[2] flex flex-col items-center justify-items-center py-[5vw] mt-[8rem] overflow-hidden space-y-12"
     >
-      <h1 className="text-[48px] sm:text-[52px] font-normal font-dragon bg-gradient-to-b from-[#5A3E17] via-[#FFF5B6] to-[#D4AF37] bg-clip-text text-transparent">
+      <h1 className="text-[72px] sm:text-[72px] font-normal font-dragon bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent">
         ALUMNI INITIATIVE
       </h1>
 

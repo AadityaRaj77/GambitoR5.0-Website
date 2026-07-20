@@ -9,7 +9,7 @@ export default function Categories() {
     return (
         <div className="text-white relative z-10 flex flex-col py-10 space-y-20 max-w-[1380px] mx-auto" id="CATEGORIES">
             <div className="mb-12 text-center space-y-12">
-                <h1 className="text-[48px] sm:text-[48px] leading-[36px] sm:leading-[45px] my-2 font-normal font-dragon text-2xl bg-gradient-to-b from-[#5A3E17] via-[#FFF5B6] to-[#D4AF37] bg-clip-text text-transparent">
+                <h1 className="text-[72px] sm:text-[72px] leading-[72px] sm:leading-[72px] my-2 font-normal font-dragon text-2xl bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent">
                     Categories
                 </h1>
 

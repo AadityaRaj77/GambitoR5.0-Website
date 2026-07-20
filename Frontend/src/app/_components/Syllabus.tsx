@@ -21,23 +21,29 @@ export default function Syllabus(){
                     {class:'CLASS 11',pdf:"class11.pdf"},
                     {class:'CLASS 12',pdf:"class12.pdf"}]
     
-    return(
-        <section className="text-white relative z-[1] my-[3rem] mb-[10vw] flex flex-col text-center max-w-[1380px] mx-auto space-y-12" id="SYLLABUS">
-          <h1 className="text-[52px] leading-[45px] my-2 font-normal font-dragon text-2xl bg-gradient-to-b from-[#5A3E17] via-[#FFF5B6] to-[#D4AF37] bg-clip-text text-transparent">SYLLABUS</h1>
-            <div>
-              <ul className="flex flex-row justify-between">
-                {buttons.map((object, index)=>(
-                  <li key={index}> {/* Add key prop here */}
-                    <a href={object.pdf} download>
-                      <NavButton text={object.class} />
-                    </a>
-                  </li>
-                ))}
-             </ul>
+    return (
+      <section
+        className="text-white relative z-[1] my-[3rem] mb-[10vw] flex flex-col text-center max-w-[1380px] mx-auto space-y-12"
+        id="SYLLABUS"
+      >
+        <h1 className="text-[72px] leading-[72px] my-2 font-normal font-dragon text-2xl bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent">
+          SYLLABUS
+        </h1>
+        <div>
+          <ul className="flex flex-row justify-between">
+            {buttons.map((object, index) => (
+              <li key={index}>
+                {" "}
+                {/* Add key prop here */}
+                <a href={object.pdf} download>
+                  <NavButton text={object.class} />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-            </div>
-            
-            {/* {std === 'CLASS 9' && (
+        {/* {std === 'CLASS 9' && (
         <div className="mt-4 px-[15vw] pt-[2vw] text-white text-2 rounded text-[20px] font-overpass leading-[25px] font-medium   ">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis tempora, vitae harum amet voluptas quisquam perspiciatis ipsam eligendi, soluta fugiat asperiores reiciendis, mollitia tenetur quasi maiores reprehenderit adipisci vel delectus accusamus atque pariatur culpa necessitatibus obcaecati. Saepe fuga rem ea cum recusandae neque soluta molestiae, reiciendis tempora amet non dolore impedit iusto distinctio sapiente ut molestias eveniet ipsum harum? Porro ex tempora cumque alias? Labore voluptatibus quae, aliquid atque, harum debitis dolore voluptate ea odio, maiores laboriosam laborum aspernatur tenetur eaque laudantium dolor a impedit provident magni accusamus? Consequatur, nostrum ratione praesentium distinctio iste saepe illum officiis voluptates mollitia fuga.
         </div>
@@ -57,7 +63,6 @@ export default function Syllabus(){
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos perspiciatis facilis, sunt cum perferendis, vitae corporis veritatis eius non hic quas consequuntur repellat amet dolores dignissimos, facere temporibus blanditiis eaque ipsa laboriosam. Aliquid, cupiditate, molestias quibusdam ut dicta optio voluptate sed delectus labore culpa voluptatibus nisi neque quo nam dolores eius? Pariatur, qui molestiae totam optio exercitationem a eaque. Esse fuga praesentium quaerat, cupiditate eveniet illo error. Odio expedita sunt deserunt atque vel velit nostrum qui dolorem. Illo reiciendis, delectus, enim qui tempora eligendi neque eius pariatur vitae aliquid atque, sunt ipsum similique laborum asperiores perspiciatis? Repellendus consectetur eaque sint.
         </div>
       )} */}
-            
-        </section>
-    )
+      </section>
+    );
 }

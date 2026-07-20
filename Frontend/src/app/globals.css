@@ -200,11 +200,5 @@ body {
   scrollbar-color: transparent transparent;
 }
 
-/* Override gradient text applied via bg-clip-text + text-transparent
-   Force solid text color and remove background-clip so headings use plain color */
-.bg-clip-text.text-transparent {
-  background: none !important;
-  -webkit-background-clip: initial !important;
-  background-clip: initial !important;
-  color: #FFFFFF !important;
-}
+/* Removed global override that prevented bg-clip-text gradients so headings can show gradient */
+

@@ -8,7 +8,7 @@ export default function Timeline(){
         className="flex items-center justify-center flex-col mt-[5vw] relative z-1 space-y-12"
         id="DATE/VENUE"
       >
-        <h1 className="text-[88px] sm:text-[96px] lg:text-[166.13px] leading-[1.1] my-2 font-normal font-dragon text-2xl bg-gradient-to-b from-[#5A3E17] via-[#FFF5B6] to-[#D4AF37] bg-clip-text text-transparent">
+        <h1 className="text-[88px] sm:text-[96px] lg:text-[166.13px] leading-[1.1] my-2 font-normal font-dragon text-2xl bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent">
           TIMELINE
         </h1>
         <Image

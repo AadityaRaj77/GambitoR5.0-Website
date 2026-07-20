@@ -15,7 +15,7 @@ import { motion } from "motion/react";
 
 function Footer() {
   let backgroundImageStyle = {
-    backgroundImage: `linear-gradient(180deg, rgba(20,18,17,0.18) 0%, rgba(5,10,12,1) 50%, rgba(20,20,20,1) 100%)`,
+    backgroundImage: `linear-gradient(180deg, rgba(20, 18, 17, 0.18) 21.15%, #050A0C 100%, #141414 100%);`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center center",
