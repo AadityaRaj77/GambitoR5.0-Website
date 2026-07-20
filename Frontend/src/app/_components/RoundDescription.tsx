@@ -16,12 +16,29 @@ export default function RoundDescription() {
     return (
       <section  id="ROUNDS" className="relative z-[1] mt-[12rem] max-w-[1380px] mx-auto mb-[20rem] space-y-12">
 
-        <div className='flex justify-center'>
+        <div className='flex justify-center space-y-10'>
 
          <h1 className="text-[52px] leading-[45px] my-2 font-normal font-dragon text-4xl bg-gradient-to-b from-[#5A3E17] via-[#FFF5B6] to-[#D4AF37] bg-clip-text text-transparent">ROUNDS</h1>
+          <h2  className="
+    absolute
+    w-[888px]
+    left-1/2
+    -translate-x-1/2
+    top-[14.26%]
+    font-gomepixel
+    font-normal
+    text-[30.25px]
+    leading-[149%]
+    tracking-[0.1em]
+    text-center
+    text-[#FAF4BE]
+  "
+          >
+            The exam is going to be conducted in <br />
+            <span className="font-bold">TWO ROUNDS</span> </h2>
         </div>
         <div>
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 mt-[160px]">
           <div className="flex justify-between items-center w-1/2">
             
           <div className="w-[100%] lg:w-1/1 justify-items-center space-y-1">
