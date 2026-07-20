@@ -17,31 +17,31 @@ export default function AboutSection(){
 
             </div>
             <div className="pl-[10vw] flex relative order-1 flex-col items-center lg:w-[50%] top-[2rem] justify-center">
-                <div className="grid grid-cols-2 gap-6 w-full">
-                    {/* Registrations */}
-                    <div className="flex flex-col items-start">
-                        <p className="text-[#FFB800] text-sm font-overpass font-medium mb-2">Registrations</p>
-                        <h3 className="text-[28px] lg:text-[36px] font-dragon font-bold text-white">40000+</h3>
-                    </div>
-                    
-                    {/* Cities */}
-                    <div className="flex flex-col items-end">
-                        <p className="text-[#FFB800] text-sm font-overpass font-medium mb-2">CITIES</p>
-                        <h3 className="text-[28px] lg:text-[36px] font-dragon font-bold text-white">200+</h3>
-                    </div>
-                    
-                    {/* Pool Prize */}
-                    <div className="flex flex-col items-start">
-                        <p className="text-[#FFB800] text-sm font-overpass font-medium mb-2">POOL PRIZE</p>
-                        <h3 className="text-[28px] lg:text-[36px] font-dragon font-bold text-white">100000</h3>
-                    </div>
-                    
-                    {/* Trip to IIT R */}
-                    <div className="flex flex-col items-end">
-                        <p className="text-[#FFB800] text-sm font-overpass font-medium mb-2">TRIP TO IIT R</p>
-                        <h3 className="text-[28px] lg:text-[36px] font-dragon font-bold text-white">3 DAYS</h3>
-                    </div>
-                </div>
+                {/*<div className="grid grid-cols-2 gap-6 w-full">*/}
+                {/*    /!* Registrations *!/*/}
+                {/*    <div className="flex flex-col items-start">*/}
+                {/*        <p className="text-[#FFB800] text-sm font-overpass font-medium mb-2">Registrations</p>*/}
+                {/*        <h3 className="text-[28px] lg:text-[36px] font-dragon font-bold text-white">40000+</h3>*/}
+                {/*    </div>*/}
+                {/*    */}
+                {/*    /!* Cities *!/*/}
+                {/*    <div className="flex flex-col items-end">*/}
+                {/*        <p className="text-[#FFB800] text-sm font-overpass font-medium mb-2">CITIES</p>*/}
+                {/*        <h3 className="text-[28px] lg:text-[36px] font-dragon font-bold text-white">200+</h3>*/}
+                {/*    </div>*/}
+                {/*    */}
+                {/*    /!* Pool Prize *!/*/}
+                {/*    <div className="flex flex-col items-start">*/}
+                {/*        <p className="text-[#FFB800] text-sm font-overpass font-medium mb-2">POOL PRIZE</p>*/}
+                {/*        <h3 className="text-[28px] lg:text-[36px] font-dragon font-bold text-white">100000</h3>*/}
+                {/*    </div>*/}
+                {/*    */}
+                {/*    /!* Trip to IIT R *!/*/}
+                {/*    <div className="flex flex-col items-end">*/}
+                {/*        <p className="text-[#FFB800] text-sm font-overpass font-medium mb-2">TRIP TO IIT R</p>*/}
+                {/*        <h3 className="text-[28px] lg:text-[36px] font-dragon font-bold text-white">3 DAYS</h3>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
                 
                 <div className="mt-12 w-full">
                     <Image alt="Gambitor showcase" className="w-full h-auto" loading="eager" width={500} height={330} src="/aboutimg.svg"></Image>
