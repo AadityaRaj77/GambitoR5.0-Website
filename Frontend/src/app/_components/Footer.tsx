@@ -6,7 +6,8 @@ import yt from "./assets/youtube.png";
 import linkedin from "./assets/linkedin.png";
 import twitter from "./assets/twitter.png";
 import logo from "./assets/footerImg.png";
-import outreachLogo from "./assets/iitr_outreach_logo.svg";
+import iitrLogo from "./assets/iitr.svg";
+import outreachLogo from "./assets/outreach.svg";
 import Link from "next/link";
 import "boxicons/css/boxicons.min.css";
 import { motion } from "motion/react";
@@ -214,7 +215,12 @@ function Footer() {
               </a>
             </div>
             <div className="flex flex-row items-center gap-x-3 pt-2">
-              <Image src={outreachLogo} alt="IIT Roorkee Outreach Cell logo" className="w-70" />
+              <a href="https://www.iitr.ac.in/" target={"_blank"} rel="noopener noreferrer">
+                <Image src={iitrLogo} alt="IIT Roorkee logo" width={69} height={72} className="w-[70px]" />
+              </a>
+              <a href="https://outreach.iitr.ac.in/" target={"_blank"} rel="noopener noreferrer">
+                <Image src={outreachLogo} alt="Outreach Cell logo" width={254} height={48} className="w-[233px]" />
+              </a>
             </div>
           </div>
         </div>
