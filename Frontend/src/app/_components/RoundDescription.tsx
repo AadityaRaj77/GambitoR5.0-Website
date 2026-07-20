@@ -25,7 +25,8 @@ export default function RoundDescription() {
           <h2
             className="
     absolute
-    w-[888px]
+    w-fit
+    whitespace-nowrap
     left-1/2
     -translate-x-1/2
     top-[14.26%]
@@ -38,8 +39,7 @@ export default function RoundDescription() {
     text-[#FAF4BE]
   "
           >
-            The exam is going to be conducted in <br />
-            <span className="font-bold">TWO ROUNDS</span>{" "}
+            The exam is going to be conducted in <span className="font-bold">TWO ROUNDS</span>
           </h2>
         </div>
         <div>
