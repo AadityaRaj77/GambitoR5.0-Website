@@ -8,29 +8,32 @@ import thirdPrize from "../../../public/thirdPrize.svg";
 function Prizes(){
 
     return (
-        <section  id="PRIZES" className=" relative z-[2] flex flex-col items-center justify-items-center py-[5vw] space-y-12 text-center">
-<h1 className="text-[52px] leading-[45px] my-2 font-normal font-dragon text-2xl bg-gradient-to-b from-[#5A3E17] via-[#FFF5B6] to-[#D4AF37] bg-clip-text text-transparent leading-60px justify-self-start">PRIZES</h1>
-            <div className="flex space-x-14 justify-items-center mr-12">
-                 <div className="mt-20">
-                    <a  target="_blank" rel="noreferrer" className="flex flex-col items-center">
-                        <Image alt="img" src={secondPrize} className="w-[18vw] "/>
-                    </a>
-            </div>
-            <div className="flex flex-col items-center">
-                    <a  target="_blank" rel="noreferrer" className="flex flex-col items-center">
-                        <Image alt="img" src={firstPrize} className="w-[20vw] "/>
-                    </a>
-                </div>  
+      <section
+        id="PRIZES"
+        className=" relative z-[2] flex flex-col items-center justify-items-center py-[5vw] space-y-12 text-center"
+      >
+        <h1 className="text-[72px] leading-[72px] my-2 font-normal font-dragon text-2xl bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent leading-60px justify-self-start">
+          PRIZES
+        </h1>
+        <div className="flex space-x-14 justify-items-center mr-12">
+          <div className="mt-20">
+            <a target="_blank" rel="noreferrer" className="flex flex-col items-center">
+              <Image alt="img" src={secondPrize} className="w-[18vw] " />
+            </a>
+          </div>
+          <div className="flex flex-col items-center">
+            <a target="_blank" rel="noreferrer" className="flex flex-col items-center">
+              <Image alt="img" src={firstPrize} className="w-[20vw] " />
+            </a>
+          </div>
 
-            <div className="mt-20">
-                    <a target="_blank" rel="noreferrer" className="flex flex-col items-center">
-                     <Image alt="img" src={thirdPrize} className="w-[15vw]" />
-                    </a>
-            </div>
-                
-            </div>
-  
-        </section>
+          <div className="mt-20">
+            <a target="_blank" rel="noreferrer" className="flex flex-col items-center">
+              <Image alt="img" src={thirdPrize} className="w-[15vw]" />
+            </a>
+          </div>
+        </div>
+      </section>
     );
 }
 

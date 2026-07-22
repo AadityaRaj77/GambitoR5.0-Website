@@ -1,94 +1,99 @@
-"use client";
-import { useState, useEffect, useCallback } from "react";
-import YouTube from "react-youtube";
+import React, { useState, useEffect } from "react";
 
-import Image from "next/image";
-import { slides } from "./assets/CarouselData";
+const slides = [
+  { src: "/t1.svg" },
+  { src: "/t2.svg" },
+  { src: "/t3.svg" },
+  { src: "/t4.svg" },
+  { src: "/t5.svg" },
+];
 
-const HomePageCarousel = () => {
-  const [current, setCurrent] = useState(2);
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-  const length = slides.length;
+const HomePageCarousel: React.FC = () => {
+  const [current, setCurrent] = useState(0);
+  const len = slides.length;
 
-  const nextSlide = useCallback(() => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  }, [current, length]);
-
-  const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
-  };
-
-  const onPlayHandler = () => {
-    setIsVideoPlaying(true);
-  };
+  const prev = () => setCurrent((c) => (c === 0 ? len - 1 : c - 1));
+  const next = () => setCurrent((c) => (c === len - 1 ? 0 : c + 1));
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      if (!isVideoPlaying) {
-        nextSlide();
-      }
-    }, 3000);
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [current, nextSlide, isVideoPlaying]);
+    const iv = setInterval(next, 5000);
+    return () => clearInterval(iv);
+  }, [current]);
 
-  //to check passed variable is an array and is not empty
-  if (!Array.isArray(slides) || slides.length <= 0) {
-    return null;
-  }
-
-  const opts = {
-    width: "100%",
-    height: "100%",
-    playerVars: {
-      autoplay: 0,
-    },
+  const getOffset = (idx: number): number => {
+    return (idx - current + len) % len;
   };
 
   return (
-    <div className="YTCarousel relative justify-items-center text-center mt-0 z-1 pt-[5vw] lg:top-[10rem] top-[5rem] space-y-12 lg:bg-transparent lg:bg-[#2445B5]" id="">
-      <div className="justify-items-center">
-        <h1 className="text-[48px] md:text-[52px] leading-[45px] my-2 font-normal font-dragon text-2xl bg-gradient-to-b from-[#5A3E17] via-[#FFF5B6] to-[#D4AF37] bg-clip-text text-transparent">IIT ROORKEE AT A GLANCE</h1>
-        {/* <p>Don't just take our word, see for yourself</p> */}
-      </div>
+    <div
+      id="TESTIMONIAL"
+      className="relative z-[2] flex flex-col items-center justify-items-center py-[5vw] mt-[8rem] overflow-hidden space-y-12"
+    >
+      <h1 className="text-[72px] sm:text-[72px] font-normal font-dragon bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent">
+        ALUMNI INITIATIVE
+      </h1>
 
-      <section className="slider justify-items-center">
-        
-        {/* To show each slide */}
-        {slides.map((img, indx) => {
+      <div className="relative w-[90vw] max-w-6xl h-[320px] sm:mt-8">
+        {slides.map((slide, idx) => {
+          const offset = getOffset(idx);
+          let translate = "";
+          let scale = "";
+          let opacity = "";
+          let zIndex = "";
+
+          if (offset === 0) {
+            translate = "translate-x-0";
+            scale = "scale-100";
+            opacity = "opacity-100";
+            zIndex = "z-30";
+          } else if (offset === 1) {
+            translate = "translate-x-[120px]";
+            scale = "scale-90";
+            opacity = "opacity-60";
+            zIndex = "z-20";
+          } else if (offset === 2) {
+            translate = "translate-x-[240px]";
+            scale = "scale-75";
+            opacity = "opacity-30";
+            zIndex = "z-10";
+          } else if (offset === 3) {
+            translate = "-translate-x-[240px]";
+            scale = "scale-75";
+            opacity = "opacity-30";
+            zIndex = "z-10";
+          } else if (offset === 4) {
+            translate = "-translate-x-[120px]";
+            scale = "scale-90";
+            opacity = "opacity-60";
+            zIndex = "z-20";
+          }
+
           return (
-            <div
-              className={`slide ${indx === current ? "active " : ""}${
-                (indx < current && `prevImg${current - indx}`) ||
-                (indx > current && `nextImg${indx - current}`) ||
-                (indx === current && "currentImg")
-              }`}
-              key={indx}
-            >
-              {/* Giving each slide a class wrt to its position from current slide */}
-              <YouTube
-                className="Img"
-                videoId={img.video}
-                opts={opts}
-                onPlay={onPlayHandler}
+            <div key={slide.src ?? idx} className="justify-items-center items-center">
+              <img
+                src={slide.src}
+                alt={`Testimonial ${idx + 1}`}
+                className={`absolute top-0 w-[320px] h-[360px] object-contain rounded-xl
+                  transform -translate-x-1/2
+                  ${translate} ${scale} ${opacity} ${zIndex}
+                  transition-all duration-700 ease-in-out`}
               />
             </div>
           );
         })}
-       
-      </section>
-      <div className="h-[10rem]">
-      {slides.map((img, indx) => {
-        return (
-          indx === current && (
-            <div key={indx} className="text-[1.2rem] font-medium text-center leading-[30px] font-overpass text-white max-w-[50rem]">
-              {img.description}
-            </div>
-          )
-        );
-      })}
 
+        {/*<button
+          onClick={prev}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full text-white hover:bg-opacity-75 z-50"
+        >
+          &#10094;
+        </button>
+        <button
+          onClick={next}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full text-white hover:bg-opacity-75 z-50"
+        >
+          &#10095;
+        </button>*/}
       </div>
     </div>
   );

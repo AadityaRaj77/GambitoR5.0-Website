@@ -2,7 +2,7 @@
 @tailwind base;
 @font-face {
   font-family: "DragonHunter";
-  src: url("/fonts/DRAGONHUNTER.otf") format("truetype");
+  src: url("/fonts/Minecrafter.Reg.ttf") format("truetype");
   font-weight: 300;
 }
 @font-face {
@@ -199,3 +199,6 @@ body {
   scrollbar-width: none;
   scrollbar-color: transparent transparent;
 }
+
+/* Removed global override that prevented bg-clip-text gradients so headings can show gradient */
+

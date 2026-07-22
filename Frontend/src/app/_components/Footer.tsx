@@ -6,6 +6,8 @@ import yt from "./assets/youtube.png";
 import linkedin from "./assets/linkedin.png";
 import twitter from "./assets/twitter.png";
 import logo from "./assets/footerImg.png";
+import iitrLogo from "./assets/iitr.svg";
+import outreachLogo from "./assets/outreach.svg";
 import Link from "next/link";
 import "boxicons/css/boxicons.min.css";
 import { motion } from "motion/react";
@@ -14,7 +16,7 @@ import { motion } from "motion/react";
 
 function Footer() {
   let backgroundImageStyle = {
-    // backgroundImage: `url("footerback.svg")`,
+    backgroundImage: 'linear-gradient(180deg, rgba(20,18,17,0.18) 18%, rgba(5,10,12,1) 100%, rgba(20,20,20,1) 100%), url("footerback.svg")',
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center center",
@@ -45,7 +47,7 @@ function Footer() {
             src="logo2.svg"
             alt="Gambtor Logo"
           />
-          <div className="flex flex-col sm:hidden items-start gap-y-5  xl:gap-y-3 xl:text-[24px] ">
+          <div className="flex flex-col sm:hidden items-start gap-y-5  xl:gap-y-3 text-sm ">
             <span className="cursor-default">FOLLOW US</span>
             <div className="flex flex-row gap-x-2">
               <a
@@ -64,7 +66,7 @@ function Footer() {
               </a>
               {/* <a href="/about"  className="w-8xl:w-6 hover:translate-y-[-0.1em] hover:text-blue-500">
                 <img src={twitter} alt="twitter"className="w-full" />
-                
+
               </a> */}
               <a
                 href="https://in.linkedin.com/company/outreach-cell-iit-roorkee"
@@ -90,7 +92,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-row relative top-10 sm:top-0 justify-center items-center gap-6 lg:gap-[6rem] font-jost font-normal  lg:text-base leading-1.5 text-center tracking-wide text-white xl:text-left xl:text-[24px] xl:leading-normal">
+        <div className="flex flex-row relative top-10 sm:top-0 justify-between items-center flex-1 gap-6 font-jost font-normal text-sm leading-1.5 text-center tracking-wide text-white xl:text-left xl:text-[18px] xl:leading-normal">
           {/* column 1 */}
           <div className="flex flex-col items-start gap-y-5 xl:gap-y-3 ">
             <Link href="/" className="hover:text-[#FAF4BE]">
@@ -115,7 +117,9 @@ function Footer() {
                 </a>
               </div>
             </div>
-            {/* <Link href="/" className="hover:text-[#FAF4BE]">INITIATORS</Link> */}
+            <Link href="/" className="hover:text-[#FAF4BE]">
+              INITIATORS
+            </Link>
 
             {/* <Link href="/">INITATORS</Link> */}
           </div>
@@ -132,18 +136,20 @@ function Footer() {
               MOCK PAPERS
             </a> */}
             <span className="hover:text-[#FAF4BE] cursor-default">PRACTICE PAPERS</span>
-            {/* <a href="FAQs.pdf" download className="hover:text-[#FAF4BE]">FAQs</a> */}
+            <Link href="/" className="hover:text-[#FAF4BE]">
+              FAQs
+            </Link>
           </div>
 
           {/* column 2 */}
 
-          <div className="sm:flex flex-col items-start gap-y-5  xl:gap-y-3 xl:text-[24px] hidden ">
+          <div className="sm:flex flex-col items-start gap-y-5  xl:gap-y-3 xl:text-base hidden ">
             <span className="hover:text-[#FAF4BE] cursor-default">FOLLOW US</span>
-            <div className="flex flex-row lg:gap-x-10 gap-x-2">
+            <div className="flex flex-row lg:gap-x-6 gap-x-2">
               <a
                 href="https://www.facebook.com/Outreach-Cell-IIT-Roorkee-102873668810173"
                 target={"_blank"}
-                className="w-8  hover:translate-y-[-0.1em]"
+                className="w-6  hover:translate-y-[-0.1em]"
               >
                 <motion.div
                   whileTap={{ scale: 0.95 }}
@@ -156,7 +162,7 @@ function Footer() {
               <a
                 href="https://www.instagram.com/outreachiitr/"
                 target={"_blank"}
-                className="w-8  hover:translate-y-[-0.1em]  "
+                className="w-6  hover:translate-y-[-0.1em]  "
               >
                 <motion.div
                   whileTap={{ scale: 0.95 }}
@@ -166,27 +172,19 @@ function Footer() {
                   <Image src={insta} alt="instagram" className="w-full" />
                 </motion.div>
               </a>
-              {/* <a href="/about"  className="w-8xl:w-6 hover:translate-y-[-0.1em] hover:text-blue-500">
-                <img src={twitter} alt="twitter"className="w-full" />
-                
-              </a> */}
-              <a
-                href="https://in.linkedin.com/company/outreach-cell-iit-roorkee"
-                target={"_blank"}
-                className="w-8  hover:translate-y-[-0.1em] "
-              >
+              <a href="/about" className="w-6  hover:translate-y-[-0.1em]">
                 <motion.div
                   whileTap={{ scale: 0.95 }}
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <Image src={linkedin} alt="linkedin" className="w-full" />
+                  <Image src={twitter} alt="twitter" className="w-full" />
                 </motion.div>
               </a>
               <a
                 href="https://www.youtube.com/@GambitoRIITRoorkee"
                 target={"_blank"}
-                className="w-11 hover:translate-y-[-0.1em] "
+                className="w-8 hover:translate-y-[-0.1em] "
               >
                 <motion.div
                   whileTap={{ scale: 0.95 }}
@@ -197,16 +195,37 @@ function Footer() {
                     src="youtube.svg"
                     height={140}
                     width={100}
-                    alt="linkedin"
+                    alt="youtube"
                     className="w-full"
                   />
                 </motion.div>
+              </a>
+              <a
+                href="https://in.linkedin.com/company/outreach-cell-iit-roorkee"
+                target={"_blank"}
+                className="w-6  hover:translate-y-[-0.1em] "
+              >
+                <motion.div
+                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <Image src={linkedin} alt="linkedin" className="w-full" />
+                </motion.div>
+              </a>
+            </div>
+            <div className="flex flex-row items-center gap-x-3 pt-2">
+              <a href="https://www.iitr.ac.in/" target={"_blank"} rel="noopener noreferrer">
+                <Image src={iitrLogo} alt="IIT Roorkee logo" width={69} height={72} className="w-[70px]" />
+              </a>
+              <a href="https://outreach.iitr.ac.in/" target={"_blank"} rel="noopener noreferrer">
+                <Image src={outreachLogo} alt="Outreach Cell logo" width={254} height={48} className="w-[233px]" />
               </a>
             </div>
           </div>
         </div>
       </div>
-      <p className="font-normal text-white text-base leading-relaxed text-center tracking-wide text-opacity-30 pb-20">
+      <p className="font-normal text-white text-xs leading-relaxed text-center tracking-wide text-opacity-30 pb-20">
         PRIVACY POLICY | COPYRIGHT | TERMS
       </p>
     </footer>
