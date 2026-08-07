@@ -20,15 +20,17 @@ export default function AboutSection(){
             in each participant. Get ready to sail on this adventure and discover what you’re truly
             capable of!{" "}
           </p>
-          <a href="https://unstop.com/competitions/gambitor-40-national-school-championship-iit-roorkee-1560754?lb=xEISBOSc">
-            <Animations>
-              <button className="mt-4 transition ease-out duration-300 bg-[#C9A454] border-4 border-[#C37227] rounded-full xl:w-[261px] w-[20vw] text-[20px] leading-[25px] text-[#A50034] font-bold h-[60px] cursor-pointer hover:bg-[#C49B44] hover:border-[#BC6E26] hover:shadow-[-1px_1px_4px_5px_rgba(188,110,38,0.30)] active:bg-[#B28B38] active:shadow-[-1px_1px_4px_5px_rgba(188,110,38,0.30)] active:border-[#AA6322] font-dragon tracking-wider	">
-                REGISTER NOW !
-              </button>
-            </Animations>
-          </a>
+          <div className="flex justify-center lg:justify-start">
+            <a href="https://unstop.com/o/vyXIDa1?lb=useMQmX7&utm_medium=Share&utm_source=quizzes&utm_campaign=Outregam75554" target="_blank" rel="noreferrer">
+              <Animations>
+                <button className="mt-4 transition ease-out duration-300 bg-[#C9A454] border-4 border-[#C37227] rounded-full xl:w-[261px] w-[20vw] min-w-[180px] text-[20px] leading-[25px] text-[#A50034] font-bold h-[60px] cursor-pointer hover:bg-[#C49B44] hover:border-[#BC6E26] hover:shadow-[-1px_1px_4px_5px_rgba(188,110,38,0.30)] active:bg-[#B28B38] active:shadow-[-1px_1px_4px_5px_rgba(188,110,38,0.30)] active:border-[#AA6322] font-dragon tracking-wider">
+                  REGISTER NOW !
+                </button>
+              </Animations>
+            </a>
+          </div>
         </div>
-        <div className="pl-[10vw] flex relative order-1 flex-col items-center lg:w-[50%] top-[2rem] justify-center">
+          <div className="pl-0 lg:pl-[3vw] xl:pl-[6vw] flex relative order-1 flex-col items-center lg:w-[50%] top-[2rem] justify-center">
           {/*<div className="grid grid-cols-2 gap-6 w-full">*/}
           {/*    /!* Registrations *!/*/}
           {/*    <div className="flex flex-col items-start">*/}

@@ -8,7 +8,6 @@ import Syllabus from "./_components/Syllabus";
 import Prizes from "./_components/Prizes";
 import Categories from "./_components/Categories";
 import Footer from "./_components/Footer";
-import HomePageCarousel from "./_components/HomePageCarousel";
 import Timeline from "./_components/Timeline";
 import { useMediaQuery } from "react-responsive";
 import Mobile from "./mobile/Mobile";
@@ -16,15 +15,6 @@ import Testimonials from "./_components/Testimonials";
 import ScrollFade from "./_components/assets/ScrollFade";
 
 export default function Home() {
-  let backgroundImageStyle = {
-    backgroundImage: `url("homebg.svg")`,
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center center',
-
-    
-    
-  };
     const isMobile = useMediaQuery({query: '(max-width: 900px)'})
     if (isMobile) return <Mobile />;
   return (
@@ -33,14 +23,13 @@ export default function Home() {
         <Mobile />
       ) : (
         <div
-          className="bg-no-repeat bg-top bg-[length:100%_auto]"
           style={{
-        
-   backgroundImage: `url('/fullbg.svg')`,
-    backgroundSize: '100% auto', 
-           }}
+            backgroundImage: `url('/fullbg.svg')`,
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'top center',
+          }}
         >
-          
           <div className="">
             <ScrollFade>
               <Header />
@@ -69,19 +58,12 @@ export default function Home() {
             <ScrollFade>
               <Testimonials />
             </ScrollFade>
-            
-            <ScrollFade>
-              <HomePageCarousel />
-            </ScrollFade>
-            
           </div>
           <ScrollFade>
             <Footer />
           </ScrollFade>
-          
         </div>
       )}
     </div>
-    
   );
 }

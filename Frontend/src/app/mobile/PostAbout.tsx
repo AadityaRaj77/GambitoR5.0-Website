@@ -2,7 +2,6 @@
 import Image from 'next/image'
 import { useState } from 'react';
 import Buttongp from './Buttongp';
-import shipgp from './assets/shipgp.svg';
 
 function PostAbout() {
   const [count, setCount] = useState(0);
@@ -10,7 +9,7 @@ function PostAbout() {
   return (
     <div className="flex flex-col mb-20 relative z-[1]">
       <div
-        className="z-50 flex flex-col items-center gap-4 sm:gap-6 px-4 sm:px-8 md:px-12"
+        className="z-50 flex flex-col items-center gap-4 sm:gap-6 px-6 w-full"
         onClick={(event) => {
           event.preventDefault();
           const target = event.target as HTMLAnchorElement;

@@ -2,13 +2,11 @@
 
 import About from "./About";
 import Image from "next/image";
-import HomePageCarousel from "../_components/HomePageCarousel";
 import Categories from "./Categories";
 import Rounds from "./Rounds";
 import Prize from "./Prize";
 import Syllabus from "./Syllabus";
 import PostAbout from "./PostAbout";
-import bottomgp from "./assets/bottomgp.svg";
 import Timeline from "./Timeline";
 import Navbar from "./NavBar";
 
@@ -23,10 +21,13 @@ import NavBar from "./NavBar";
 const Mobile = () => {
   return (
     <div
-      className="bg-no-repeat bg-top bg-[length:100%_auto] overflow-x-hidden w-screen"
+      className="overflow-x-hidden w-screen"
       style={{
         backgroundImage: `url(${bg.src})`,
-        backgroundSize: "100% auto",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "top center",
+        backgroundColor: "#000",
       }}
     >
       <ScrollFade>
@@ -66,15 +67,9 @@ const Mobile = () => {
         <Testimonials></Testimonials>
       </ScrollFade>
 
-      <div className=" relative z-20">
-        <ScrollFade>
-          {" "}
-          <HomePageCarousel></HomePageCarousel>
-        </ScrollFade>
-        <ScrollFade>
-          <Footer></Footer>
-        </ScrollFade>
-      </div>
+      <ScrollFade>
+        <Footer></Footer>
+      </ScrollFade>
       <NavBar></NavBar>
     </div>
   );

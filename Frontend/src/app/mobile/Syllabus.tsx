@@ -3,14 +3,12 @@ import Image from "next/image";
 import { useState } from "react";
 import "./Res.css";
 
-import V1 from "./assets/Syllabus/v1.svg";
-import W1 from "./assets/Syllabus/w1.svg";
 
 function NavButton({ text }: any) {
   return (
     <button
       id={`b${text}`}
-      className="transition ease-out duration-300 border-4 border-[#FFE016] rounded-full xl:w-[300px] w-[30vw] text-[20px] leading-[25px] text-[#FAF4BE] font-bold h-[60px] cursor-pointer hover:bg-[#A96104] hover:border-[#FFE016] active:bg-[#BA8136] active:border-[#FFE645]"
+      className="transition ease-out duration-300 border-4 border-[#FFE016] rounded-full w-[80vw] max-w-[300px] text-[18px] leading-[25px] text-[#FAF4BE] font-dragon font-regular h-[56px] cursor-pointer hover:bg-[#A96104] hover:border-[#FFE016] active:bg-[#BA8136] active:border-[#FFE645]"
     >
       {text}
     </button>
@@ -23,7 +21,8 @@ export default function Syllabus() {
     setSelectedClass(className);
   };
   const buttons = [
-    { class: "CLASS 9", pdf: "class9.pdf" },
+    { class: "CLASS 8",  pdf: "class8.pdf" },
+    { class: "CLASS 9",  pdf: "class9.pdf" },
     { class: "CLASS 10", pdf: "class10.pdf" },
     { class: "CLASS 11", pdf: "class11.pdf" },
     { class: "CLASS 12", pdf: "class12.pdf" },
@@ -34,11 +33,11 @@ export default function Syllabus() {
       id="SYLLABUS"
       className="relative z-[4] pt-14 w-full text-white justify-items-center space-y-12 mb-12"
     >
-      <h1 className="text-[48px] leading-[45px] my-2 font-normal font-dragon text-2xl bg-gradient-to-b from-[#5A3E17] via-[#FFF5B6] to-[#D4AF37] bg-clip-text text-transparent">
+      <h1 className="text-[48px] leading-[45px] my-2 font-normal font-dragon bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent">
         SYLLABUS
       </h1>
       <div className="">
-        <ul className="flex flex-col justify-between space-y-8">
+        <ul className="flex flex-col items-center justify-center space-y-6">
           {buttons.map((object, index) => (
             <li key={index}>
               {" "}

@@ -16,7 +16,7 @@ export default function RoundDescription() {
     return (
       <section
         id="ROUNDS"
-        className="relative z-[1] mt-[12rem] max-w-[1380px] mx-auto mb-[20rem] space-y-12"
+        className="relative z-[1] mt-[6rem] xl:mt-[12rem] max-w-[1380px] mx-auto px-6 lg:px-10 mb-[10rem] xl:mb-[20rem] space-y-12"
       >
         <div className="flex justify-center space-y-10">
           <h1 className="text-[72px] leading-[72px] my-2 font-normal font-dragon text-4xl bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent">
@@ -43,7 +43,7 @@ export default function RoundDescription() {
           </h2>
         </div>
         <div>
-          <div className="flex space-x-4 mt-[160px]">
+          <div className="flex space-x-4 mt-[6rem] xl:mt-[160px]">
             <div className="flex justify-between items-center w-1/2">
               <div className="w-[100%] lg:w-1/1 justify-items-center space-y-1">
                 <div className="flex">
@@ -69,7 +69,7 @@ export default function RoundDescription() {
               </div>
             </div>
             <div className="relative flex-col justify-between w-1/2 ">
-              <div className="absolute w-full lg:w-1/1 justify-items-center space-y-1 mt-[14rem]">
+              <div className="absolute w-full lg:w-1/1 justify-items-center space-y-1 mt-[6rem] xl:mt-[14rem]">
                 <div className="flex">
                   <h1 className="text-[36px] font-medium leading-[45px] font-dragon tracking-wider text-[#FFB400]">
                     PINNACLE

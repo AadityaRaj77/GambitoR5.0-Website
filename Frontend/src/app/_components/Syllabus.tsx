@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 function NavButton({text}:any){
     return (
-        <button id={`b${text}`} className="transition ease-out duration-300 border-4 border-[#FFE016] rounded-full xl:w-[261px] w-[20vw] text-[20px] leading-[25px] text-[#FAF4BE] font-dragon font-regular h-[60px] cursor-pointer hover:bg-[#A96104] hover:border-[#FFE016] active:bg-[#BA8136] active:border-[#FFE645]">{text}</button>
+        <button id={`b${text}`} className="transition ease-out duration-300 border-4 border-[#FFE016] rounded-full w-[clamp(140px,18vw,261px)] text-[20px] leading-[25px] text-[#FAF4BE] font-dragon font-regular h-[60px] cursor-pointer hover:bg-[#A96104] hover:border-[#FFE016] active:bg-[#BA8136] active:border-[#FFE645]">{text}</button>
     );
 }
 
@@ -15,7 +15,7 @@ export default function Syllabus(){
   
   
     const buttons = [
-                    {class:'CLASS 8', pdf:"class9.pdf"},
+                    {class:'CLASS 8', pdf:"class8.pdf"},
                     {class:'CLASS 9',pdf:"class9.pdf"},
                     {class:'CLASS 10',pdf:"class10.pdf"},
                     {class:'CLASS 11',pdf:"class11.pdf"},
@@ -30,7 +30,7 @@ export default function Syllabus(){
           SYLLABUS
         </h1>
         <div>
-          <ul className="flex flex-row justify-between">
+          <ul className="flex flex-row flex-wrap justify-center gap-x-4 gap-y-4">
             {buttons.map((object, index) => (
               <li key={index}>
                 {" "}

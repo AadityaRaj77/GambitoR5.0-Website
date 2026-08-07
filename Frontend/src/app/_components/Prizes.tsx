@@ -15,21 +15,21 @@ function Prizes(){
         <h1 className="text-[72px] leading-[72px] my-2 font-normal font-dragon text-2xl bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent leading-60px justify-self-start">
           PRIZES
         </h1>
-        <div className="flex space-x-14 justify-items-center mr-12">
+        <div className="flex space-x-14 justify-center mx-auto">
           <div className="mt-20">
             <a target="_blank" rel="noreferrer" className="flex flex-col items-center">
-              <Image alt="img" src={secondPrize} className="w-[18vw] " />
+              <Image alt="img" src={secondPrize} className="w-[18vw] min-w-[120px] max-w-[320px]" />
             </a>
           </div>
           <div className="flex flex-col items-center">
             <a target="_blank" rel="noreferrer" className="flex flex-col items-center">
-              <Image alt="img" src={firstPrize} className="w-[20vw] " />
+              <Image alt="img" src={firstPrize} className="w-[20vw] min-w-[140px] max-w-[360px]" />
             </a>
           </div>
 
           <div className="mt-20">
             <a target="_blank" rel="noreferrer" className="flex flex-col items-center">
-              <Image alt="img" src={thirdPrize} className="w-[15vw]" />
+              <Image alt="img" src={thirdPrize} className="w-[15vw] min-w-[100px] max-w-[270px]" />
             </a>
           </div>
         </div>
