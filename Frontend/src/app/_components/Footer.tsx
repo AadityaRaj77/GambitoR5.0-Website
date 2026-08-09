@@ -105,15 +105,15 @@ function Footer() {
               <div className="text-white hover:text-[#FAF4BE]">CONTACTS</div>
 
               {/* Dropdown */}
-              <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-lg font-semibold p-2 rounded-md shadow-lg rmd:text-sm space-y-2">
-                <a href="tel:+919147050034" className="block hover:text-[#FAF4BE]">
-                  Pratham Jana : +91 9147050034
+              <div className="absolute left-0 bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-base font-semibold p-3 rounded-md shadow-lg space-y-2 whitespace-normal w-max max-w-[calc(100vw-2rem)] z-50">
+                <a href="tel:+917056133480" className="block hover:text-[#FAF4BE] break-words">
+                  Prateek Gupta : +91 7056133480
                 </a>
-                <a href="tel:+918950297425" className="block hover:text-[#FAF4BE]">
-                  Niviti Sharma : +91 8950297425
+                <a href="tel:+919569672796" className="block hover:text-[#FAF4BE] break-words">
+                  Vaibhav Sharma : +91 9569672796
                 </a>
-                <a href="tel:+917906228743" className="block hover:text-[#FAF4BE]">
-                  Dhruv Jyot Singh : +91 7906228743
+                <a href="tel:+919541499808" className="block hover:text-[#FAF4BE] break-words">
+                  Himesh Sardana : +91 9541499808
                 </a>
               </div>
             </div>
