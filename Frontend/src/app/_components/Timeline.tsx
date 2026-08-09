@@ -7,7 +7,7 @@ export default function Timeline() {
       id="DATE/VENUE"
     >
       <Image
-        src="/map1.svg"
+        src="/timeline.svg"
         width={894}
         height={2042}
         className="w-full max-w-[900px] h-auto"

@@ -15,7 +15,7 @@ import thirdPrize from './assets/Prize/thirdPrize.svg'
 export default function Prize() {
     
     return (
-        <section className=" relative z-[2] flex flex-col items-center justify-items-center py-[5vw] space-y-12">
+        <section id="PRIZES" className="relative z-[2] flex flex-col items-center justify-items-center py-8 space-y-8">
 <h1 className="text-[48px] leading-[45px] my-2 font-normal font-dragon bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent leading-60px">PRIZES</h1>
             <div className="flex space-x-8 justify-items-center">
                  <div className="mt-20">

@@ -27,7 +27,7 @@ const Testimonials: React.FC = () => {
   return (
     <div
       id="TESTIMONIAL"
-      className="relative z-[2] flex flex-col items-center justify-items-center py-[5vw] mt-[8rem] overflow-hidden space-y-12"
+      className="relative z-[2] flex flex-col items-center justify-items-center py-8 mt-6 overflow-hidden space-y-8"
     >
       <h1 className="text-[clamp(36px,8vw,72px)] font-normal font-dragon bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent">
         TESTIMONIALS

@@ -38,7 +38,7 @@ function Footer() {
 
   return (
     <footer className="" style={backgroundImageStyle}>
-      <div className="flex justify-between flex-col sm:flex-row lg:mt-[12rem] py-[12rem] space-y-20 md:space-y-0 lg:px-[7rem] px-4 md:px-[4rem]">
+      <div className="flex justify-between flex-col sm:flex-row lg:mt-[12rem] py-16 md:py-[12rem] space-y-20 md:space-y-0 lg:px-[7rem] px-4 md:px-[4rem]">
         <div className="flex relative top-10 sm:top-0 items-center justify-center text-white space-x-10">
           <Image
             className="w-[250px] lg:w-[450px]"
