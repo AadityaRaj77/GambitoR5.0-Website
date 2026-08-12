@@ -14,20 +14,13 @@ export default function Categories() {
         </h1>
       </div>
 
-      {/*
-        Pentagon — all values in vw so layout scales identically at every phone width.
-        --r  = pentagon radius  (card centres sit on this circle)
-        --bw = card width
-        --bh = card height
-        Verified no overflow at 320px, 375px, 390px, 430px.
-      */}
       <div
         className="relative w-full"
         style={{
           height: "min(92vw, 600px)",
-          ["--r"  as any]: "min(27vw, 280px)",
-          ["--bw" as any]: "min(22vw, 241px)",
-          ["--bh" as any]: "min(18vw, 202px)",
+          ["--r" as any]: "min(35vw, 280px)",
+          ["--bw" as any]: "min(30vw, 241px)",
+          ["--bh" as any]: "min(28vw, 202px)",
         }}
       >
         {/* ── Central badge ── */}
@@ -37,7 +30,7 @@ export default function Categories() {
             left: "50%",
             top: "50%",
             transform: "translate(-50%,-50%)",
-            width: "min(30vw, 280px)",
+            width: "min(50vw, 280px)",
           }}
         >
           <Image
@@ -80,7 +73,7 @@ export default function Categories() {
           className="absolute z-20 transform -translate-x-1/2 -translate-y-1/2"
           style={{
             left: "calc(50% + 0.95106 * var(--r))",
-            top:  "calc(50% - 0.30902 * var(--r))",
+            top: "calc(50% - 0.30902 * var(--r))",
           }}
         >
           <Animations hoverEffect={{ scale: 1.02 }} tapEffect={{ scale: 1.02 }}>
@@ -108,7 +101,7 @@ export default function Categories() {
           className="absolute z-20 transform -translate-x-1/2 -translate-y-1/2"
           style={{
             left: "calc(50% + 0.58779 * var(--r))",
-            top:  "calc(50% + 0.80902 * var(--r))",
+            top: "calc(50% + 0.80902 * var(--r))",
           }}
         >
           <Animations hoverEffect={{ scale: 1.02 }} tapEffect={{ scale: 1.02 }}>
@@ -136,7 +129,7 @@ export default function Categories() {
           className="absolute z-20 transform -translate-x-1/2 -translate-y-1/2"
           style={{
             left: "calc(50% - 0.58779 * var(--r))",
-            top:  "calc(50% + 0.80902 * var(--r))",
+            top: "calc(50% + 0.80902 * var(--r))",
           }}
         >
           <Animations hoverEffect={{ scale: 1.02 }} tapEffect={{ scale: 1.02 }}>
@@ -164,7 +157,7 @@ export default function Categories() {
           className="absolute z-20 transform -translate-x-1/2 -translate-y-1/2"
           style={{
             left: "calc(50% - 0.95106 * var(--r))",
-            top:  "calc(50% - 0.30902 * var(--r))",
+            top: "calc(50% - 0.30902 * var(--r))",
           }}
         >
           <Animations hoverEffect={{ scale: 1.02 }} tapEffect={{ scale: 1.02 }}>

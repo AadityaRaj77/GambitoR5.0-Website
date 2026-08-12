@@ -38,8 +38,69 @@ function Footer() {
 
   return (
     <footer className="" style={backgroundImageStyle}>
-      <div className="flex justify-between flex-col sm:flex-row lg:mt-[12rem] py-16 md:py-[12rem] space-y-20 md:space-y-0 lg:px-[7rem] px-4 md:px-[4rem]">
-        <div className="flex relative top-10 sm:top-0 items-center justify-center text-white space-x-10">
+      {/* ── Mobile-only header block: logo + social icons + partner logos ── */}
+      <div className="sm:hidden flex flex-col items-center gap-y-6 pt-12 px-6">
+        <Image
+          className="w-[200px]"
+          width={200}
+          height={200}
+          src="logo2.svg"
+          alt="Gambitor Logo"
+        />
+        {/* Partner logos */}
+        <div className="flex flex-row items-center gap-x-3">
+          <a href="https://www.iitr.ac.in/" target={"_blank"} rel="noopener noreferrer">
+            <Image src={iitrLogo} alt="IIT Roorkee logo" width={69} height={72} className="w-[50px]" />
+          </a>
+          <a href="https://outreach.iitr.ac.in/" target={"_blank"} rel="noopener noreferrer">
+            <Image src={outreachLogo} alt="Outreach Cell logo" width={254} height={48} className="w-[150px]" />
+          </a>
+        </div>
+        <span className="cursor-default text-white text-sm tracking-wide">FOLLOW US</span>
+        <div className="flex flex-row gap-x-4 items-center">
+          <a
+            href="https://www.facebook.com/Outreach-Cell-IIT-Roorkee-102873668810173"
+            target={"_blank"}
+            className="w-8 hover:translate-y-[-0.1em]"
+          >
+            <Image src={fb} alt="facebook" className="w-full" />
+          </a>
+          <a
+            href="https://www.instagram.com/outreachiitr/"
+            target={"_blank"}
+            className="w-8 hover:translate-y-[-0.1em]"
+          >
+            <Image src={insta} alt="instagram" className="w-full" />
+          </a>
+          <a href="/about" className="w-8 hover:translate-y-[-0.1em]">
+            <Image src={twitter} alt="twitter" className="w-full" />
+          </a>
+          <a
+            href="https://www.youtube.com/@GambitoRIITRoorkee"
+            target={"_blank"}
+            className="w-10 hover:translate-y-[-0.1em]"
+          >
+            <Image
+              src="youtube.svg"
+              height={100}
+              width={100}
+              alt="youtube"
+              className="w-full"
+            />
+          </a>
+          <a
+            href="https://in.linkedin.com/company/outreach-cell-iit-roorkee"
+            target={"_blank"}
+            className="w-8 hover:translate-y-[-0.1em]"
+          >
+            <Image src={linkedin} alt="linkedin" className="w-full" />
+          </a>
+        </div>
+      </div>
+
+      <div className="flex justify-between flex-col sm:flex-row lg:mt-[12rem] py-10 md:py-[12rem] space-y-8 md:space-y-0 lg:px-[7rem] px-4 md:px-[4rem]">
+        {/* Desktop-only logo */}
+        <div className="hidden sm:flex relative top-10 sm:top-0 items-center justify-center text-white space-x-10">
           <Image
             className="w-[250px] lg:w-[450px]"
             width={250}
@@ -47,49 +108,6 @@ function Footer() {
             src="logo2.svg"
             alt="Gambtor Logo"
           />
-          <div className="flex flex-col sm:hidden items-start gap-y-5  xl:gap-y-3 text-sm ">
-            <span className="cursor-default">FOLLOW US</span>
-            <div className="flex flex-row gap-x-2">
-              <a
-                href="https://www.facebook.com/Outreach-Cell-IIT-Roorkee-102873668810173"
-                target={"_blank"}
-                className="w-8 xl:w-6 hover:translate-y-[-0.1em]"
-              >
-                <Image src={fb} alt="facebook" className="w-full" />
-              </a>
-              <a
-                href="https://www.instagram.com/outreachiitr/"
-                target={"_blank"}
-                className="w-8 xl:w-6 hover:translate-y-[-0.1em] "
-              >
-                <Image src={insta} alt="instagram" className="w-full" />
-              </a>
-              {/* <a href="/about"  className="w-8xl:w-6 hover:translate-y-[-0.1em] hover:text-blue-500">
-                <img src={twitter} alt="twitter"className="w-full" />
-
-              </a> */}
-              <a
-                href="https://in.linkedin.com/company/outreach-cell-iit-roorkee"
-                target={"_blank"}
-                className="w-8 xl:w-6 hover:translate-y-[-0.1em]"
-              >
-                <Image src={linkedin} alt="linkedin" className="w-full" />
-              </a>
-              <a
-                href="https://www.youtube.com/@GambitoRIITRoorkee"
-                target={"_blank"}
-                className="w-10 xl:w-6 hover:translate-y-[-0.1em] relative top-1 "
-              >
-                <Image
-                  src="youtube.svg"
-                  height={100}
-                  width={100}
-                  alt="linkedin"
-                  className="w-full"
-                />
-              </a>
-            </div>
-          </div>
         </div>
 
         <div className="flex flex-row relative top-10 sm:top-0 justify-between items-center flex-1 gap-6 font-jost font-normal text-sm leading-1.5 text-center tracking-wide text-white xl:text-left xl:text-[18px] xl:leading-normal">
