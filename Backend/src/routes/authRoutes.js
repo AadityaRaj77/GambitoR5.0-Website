@@ -40,10 +40,9 @@ router.get('/logout', AuthController.logout);
 router.post("/sendOtp", AuthController.sendOtp);
 router.post("/verifyOtp", AuthController.verifyOtp);
 
-// mobile verification
-
-router.post("/sendOtpPhone", AuthController.sendOtpPhone);
-router.post("/verifyOtpPhone", AuthController.verifyOtpPhone);
+// mobile verification — disabled for GambitoR 5.0 (registration via Unstop, Twilio not required)
+// router.post("/sendOtpPhone", AuthController.sendOtpPhone);
+// router.post("/verifyOtpPhone", AuthController.verifyOtpPhone);
 
 //info
 router.post('/user/:id/details', AuthController.updateAdditionalDetails);

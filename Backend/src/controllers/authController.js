@@ -7,7 +7,7 @@ import { registerSchema, loginSchema, infoSchema ,verifySchema} from "../validat
 import bcrypt from "bcryptjs";
 import { createOTP, verifyOTP } from "../utils/otpGenerator.js";
 import mailService from "../utils/mailService.js";
-import { sendOtp, generateOTP } from "../utils/mobileOTP.js";
+// import { sendOtp, generateOTP } from "../utils/mobileOTP.js"; // disabled — Twilio phone OTP not used in GambitoR 5.0 (registration via Unstop)
 import generateTokenAndSetCookie from "../utils/generateTokenAndSetCookie.js";
 
 class AuthController {
@@ -254,72 +254,49 @@ class AuthController {
     }
   });
 
-  static sendOtpPhone = asyncHandler(async (req, res, next) => {
-    try {
-      const phoneNumber = "+91" + req.body.contactNumber;
-      if (!phoneNumber) {
-        return res.status(400).json({ message: "Phone number is required" });
-      }
+  // sendOtpPhone — disabled for GambitoR 5.0 (Twilio not configured, registration via Unstop)
+  // static sendOtpPhone = asyncHandler(async (req, res, next) => {
+  //   try {
+  //     const phoneNumber = "+91" + req.body.contactNumber;
+  //     if (!phoneNumber) {
+  //       return res.status(400).json({ message: "Phone number is required" });
+  //     }
+  //     const otp = generateOTP();
+  //     const expiresAt = new Date(Date.now() + 5 * 60 * 1000);
+  //     await prisma.phoneotp.create({
+  //       data: { phoneNumber, otp, expiresAt },
+  //     });
+  //     const response = await sendOtp(phoneNumber, otp);
+  //     console.log(`Verification code sent to ${phoneNumber}`);
+  //     res.status(200).json({ status: "success", data: "SMS sent successfully.", response });
+  //   } catch (error) {
+  //     console.error("Error sending verification code:", error);
+  //     res.status(500).json({ status: "error", message: "Failed to send SMS. Check your phone number" });
+  //   }
+  // });
 
-      const otp = generateOTP();
-      const expiresAt = new Date(Date.now() + 5 * 60 * 1000);
-      await prisma.phoneotp.create({
-        data: {
-          phoneNumber,
-          otp,
-          expiresAt,
-        },
-      });
-
-      const response = await sendOtp(phoneNumber, otp);
-
-      console.log(`Verification code sent to ${phoneNumber}`);
-      res.status(200).json({
-        status: "success",
-        data: "SMS sent successfully.",
-        response,
-      });
-    } catch (error) {
-      console.error("Error sending verification code:", error);
-      res.status(500).json({
-        status: "error",
-        message: "Failed to send SMS.Check your phone Number",
-      });
-    }
-  });
-
-  static verifyOtpPhone = asyncHandler(async (req, res, next) => {
-    try {
-      const phoneNumber = "+91" + req.body.contactNumber;
-      const otp = req.body.otp;
-      if (!phoneNumber || !otp) {
-        return res.status(400).json({ message: "Phone number and OTP are required" });
-      }
-      const otpRecord = await prisma.phoneotp.findFirst({
-        where: {
-          phoneNumber,
-          otp,
-          expiresAt: {
-            gt: new Date(),
-          },
-        },
-      });
-
-      if (otpRecord) {
-        await prisma.phoneotp.delete({
-          where: {
-            id: otpRecord.id,
-          },
-        });
-        return res.status(200).json({ message: "OTP verified successfully" });
-      } else {
-        return res.status(400).json({ message: "Invalid or expired OTP" });
-      }
-    } catch (error) {
-      console.error("Error verifying code:", error);
-      throw error;
-    }
-  });
+  // verifyOtpPhone — disabled for GambitoR 5.0 (Twilio not configured, registration via Unstop)
+  // static verifyOtpPhone = asyncHandler(async (req, res, next) => {
+  //   try {
+  //     const phoneNumber = "+91" + req.body.contactNumber;
+  //     const otp = req.body.otp;
+  //     if (!phoneNumber || !otp) {
+  //       return res.status(400).json({ message: "Phone number and OTP are required" });
+  //     }
+  //     const otpRecord = await prisma.phoneotp.findFirst({
+  //       where: { phoneNumber, otp, expiresAt: { gt: new Date() } },
+  //     });
+  //     if (otpRecord) {
+  //       await prisma.phoneotp.delete({ where: { id: otpRecord.id } });
+  //       return res.status(200).json({ message: "OTP verified successfully" });
+  //     } else {
+  //       return res.status(400).json({ message: "Invalid or expired OTP" });
+  //     }
+  //   } catch (error) {
+  //     console.error("Error verifying code:", error);
+  //     throw error;
+  //   }
+  // });
 
   static logout = (req, res) => {
     res.clearCookie('jwt').status(200).json('Signout success!');

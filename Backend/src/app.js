@@ -1,22 +1,24 @@
 import express from "express";
+import dotenv from "dotenv";
+dotenv.config();
 import cors from "cors";
 import session from "express-session";
 import "./utils/passportConfig.js";
 import globalErrorHandler from "./controllers/errorController.js";
 import cookieParser from "cookie-parser";
 import { ApiError } from "./utils/ApiError.js";
-import  passport  from "passport";
-import dotenv from "dotenv";
+import passport from "passport";
+// import dotenv from "dotenv";
 
 //routes import
-import {router} from "./routes/authRoutes.js";
+import { router } from "./routes/authRoutes.js";
 import { userRouter } from "./routes/userRoutes.js";
 
 const app = express();
 
-dotenv.config();
+// dotenv.config();
 
-console.log('CORS_ORIGIN:', process.env.CORS_ORIGIN );
+console.log('CORS_ORIGIN:', process.env.CORS_ORIGIN);
 
 const corsOptions = {
   origin: process.env.CORS_ORIGIN || 'http://localhost:3000',

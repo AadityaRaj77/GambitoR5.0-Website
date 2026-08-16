@@ -49,6 +49,7 @@ enum Category {
   METIOX
   APOLLOX
   ATHENOX
+  ASTROX  
 }
 
 enum Role {

@@ -16,7 +16,7 @@ export const loginSchema = vine.object({
 
 export const infoSchema = vine.object({
   name:vine.string(),
-  category:vine.string().in(['ARETEOX','METIOX', 'ATHENOX', 'APOLLOX']),
+  category:vine.string().in(['ARETEOX','METIOX', 'ATHENOX', 'APOLLOX', 'ASTROX']),
   schoolName:vine.string(),
   contactNumber:vine.string().minLength(10, 'Mobile number must be exactly 10 digits long').maxLength(10, 'Mobile number must be exactly 10 digits long').regex(/^\d+$/, 'Mobile number must contain only numbers'),
   state:vine.string(),
