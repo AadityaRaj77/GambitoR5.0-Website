@@ -1,16 +1,17 @@
-import twilio from 'twilio';
-const accountSid = process.env.ACCOUNT_SID;
-const authToken = process.env.ACCOUNT_TOKEN;
-const client = new twilio(accountSid, authToken);
-const TWILIO_PHONE_NUMBER = process.env.TWILIO_PHONE_NUMBER;
+// Twilio phone OTP — disabled for GambitoR 5.0 (registration via Unstop, credentials not required)
+// import twilio from 'twilio';
+// const accountSid = process.env.ACCOUNT_SID;
+// const authToken = process.env.ACCOUNT_TOKEN;
+// const client = new twilio(accountSid, authToken);
+// const TWILIO_PHONE_NUMBER = process.env.TWILIO_PHONE_NUMBER;
 
-const sendOtp = (phoneNumber, otp) => {
-  return client.messages.create({
-    body: `Your OTP for phone number verification for Gambitor4.0 is ${otp}`,
-    from: TWILIO_PHONE_NUMBER,
-    to: phoneNumber,
-  });
-};
+// const sendOtp = (phoneNumber, otp) => {
+//   return client.messages.create({
+//     body: `Your OTP for phone number verification for Gambitor4.0 is ${otp}`,
+//     from: TWILIO_PHONE_NUMBER,
+//     to: phoneNumber,
+//   });
+// };
 
 // import axios from 'axios'
 
@@ -62,5 +63,6 @@ function generateOTP() {
   return otp.toString();
 }
 
-export {sendOtp,generateOTP}
+// export { sendOtp, generateOTP }  // sendOtp disabled — Twilio not used in GambitoR 5.0
+export { generateOTP }
 

@@ -33,7 +33,7 @@ const HomePageCarousel: React.FC = () => {
         ALUMNI INITIATIVE
       </h1>
 
-      <div className="relative w-[90vw] max-w-6xl h-[320px] sm:mt-8">
+      <div className="relative w-[90vw] max-w-6xl h-[380px] sm:mt-8">
         {slides.map((slide, idx) => {
           const offset = getOffset(idx);
           let translate = "";
@@ -47,22 +47,22 @@ const HomePageCarousel: React.FC = () => {
             opacity = "opacity-100";
             zIndex = "z-30";
           } else if (offset === 1) {
-            translate = "translate-x-[120px]";
+            translate = "";
             scale = "scale-90";
             opacity = "opacity-60";
             zIndex = "z-20";
           } else if (offset === 2) {
-            translate = "translate-x-[240px]";
+            translate = "";
             scale = "scale-75";
             opacity = "opacity-30";
             zIndex = "z-10";
           } else if (offset === 3) {
-            translate = "-translate-x-[240px]";
+            translate = "";
             scale = "scale-75";
             opacity = "opacity-30";
             zIndex = "z-10";
           } else if (offset === 4) {
-            translate = "-translate-x-[120px]";
+            translate = "";
             scale = "scale-90";
             opacity = "opacity-60";
             zIndex = "z-20";
@@ -73,10 +73,25 @@ const HomePageCarousel: React.FC = () => {
               <img
                 src={slide.src}
                 alt={`Testimonial ${idx + 1}`}
-                className={`absolute top-0 w-[320px] h-[360px] object-contain rounded-xl
-                  transform -translate-x-1/2
-                  ${translate} ${scale} ${opacity} ${zIndex}
-                  transition-all duration-700 ease-in-out`}
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: '50%',
+                width: '320px',
+                height: '360px',
+                objectFit: 'contain',
+                borderRadius: '0.75rem',
+                transform: `translateX(-50%) ${
+                  offset === 1 ? 'translateX(10vw) scale(0.9)' :
+                  offset === 2 ? 'translateX(20vw) scale(0.75)' :
+                  offset === 3 ? 'translateX(-20vw) scale(0.75)' :
+                  offset === 4 ? 'translateX(-10vw) scale(0.9)' :
+                  'scale(1)'
+                }`,
+                opacity: offset === 0 ? 1 : offset === 1 || offset === 4 ? 0.6 : 0.3,
+                zIndex: offset === 0 ? 30 : offset === 1 || offset === 4 ? 20 : 10,
+                transition: 'all 700ms ease-in-out',
+              }}
               />
             </div>
           );

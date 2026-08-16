@@ -11,24 +11,27 @@ export default function AboutSection(){
             ABOUT GAMBITOR
           </h1>
           <p className="text-[20px] font-overpass leading-[25px]  font-medium text-justify mb-8 text-[#FAF4BE]">
-            GambitoR is a prestigious national-level exam tailored specifically for students from
-            classes 9th to 12th who strive for excellence and have a passion for tackling and
-            conquering challenges. This unique competition evaluates students' logical and
-            analytical skills through questions designed by our student community, all within the
-            exciting and adventurous theme of Harry Potter. Organized by the Outreach Cell of IIT
-            Roorkee, this year marks the fourth edition of GambitoR, promising to bring out the best
-            in each participant. Get ready to sail on this adventure and discover what you’re truly
-            capable of!{" "}
+            GambitoR is a prestigious national-level exam designed specifically for students of
+            Classes 8 to 12 who strive for excellence and enjoy solving challenging problems. This
+            unique competition evaluates students&apos; logical and analytical skills through
+            questions crafted by the student community of IIT Roorkee, all set within the exciting
+            and immersive world of Minecraft. Organized by the Outreach Cell of IIT Roorkee, this
+            year marks the <span className="font-bold">fifth edition</span> of GambitoR, promising
+            an adventurous experience that encourages participants to think creatively, overcome
+            challenges, and showcase their true potential. Get ready to embark on this exciting
+            journey and discover what you&apos;re truly capable of!{" "}
           </p>
-          <a href="https://unstop.com/competitions/gambitor-40-national-school-championship-iit-roorkee-1560754?lb=xEISBOSc">
-            <Animations>
-              <button className="mt-4 transition ease-out duration-300 bg-[#C9A454] border-4 border-[#C37227] rounded-full xl:w-[261px] w-[20vw] text-[20px] leading-[25px] text-[#A50034] font-bold h-[60px] cursor-pointer hover:bg-[#C49B44] hover:border-[#BC6E26] hover:shadow-[-1px_1px_4px_5px_rgba(188,110,38,0.30)] active:bg-[#B28B38] active:shadow-[-1px_1px_4px_5px_rgba(188,110,38,0.30)] active:border-[#AA6322] font-dragon tracking-wider	">
-                REGISTER NOW !
-              </button>
-            </Animations>
-          </a>
+          <div className="flex justify-center lg:justify-start">
+            <a href="https://unstop.com/o/vyXIDa1?lb=useMQmX7&utm_medium=Share&utm_source=quizzes&utm_campaign=Outregam75554" target="_blank" rel="noreferrer">
+              <Animations>
+                <button className="mt-4 transition ease-out duration-300 bg-[#C9A454] border-4 border-[#C37227] rounded-full xl:w-[261px] w-[20vw] min-w-[180px] text-[20px] leading-[25px] text-[#A50034] font-bold h-[60px] cursor-pointer hover:bg-[#C49B44] hover:border-[#BC6E26] hover:shadow-[-1px_1px_4px_5px_rgba(188,110,38,0.30)] active:bg-[#B28B38] active:shadow-[-1px_1px_4px_5px_rgba(188,110,38,0.30)] active:border-[#AA6322] font-dragon tracking-wider">
+                  REGISTER NOW !
+                </button>
+              </Animations>
+            </a>
+          </div>
         </div>
-        <div className="pl-[10vw] flex relative order-1 flex-col items-center lg:w-[50%] top-[2rem] justify-center">
+          <div className="pl-0 lg:pl-[3vw] xl:pl-[6vw] flex relative order-1 flex-col items-center lg:w-[50%] top-[2rem] justify-center">
           {/*<div className="grid grid-cols-2 gap-6 w-full">*/}
           {/*    /!* Registrations *!/*/}
           {/*    <div className="flex flex-col items-start">*/}
