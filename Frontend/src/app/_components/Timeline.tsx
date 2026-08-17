@@ -12,6 +12,8 @@ export default function Timeline() {
         height={2042}
         className="w-full max-w-[900px] h-auto"
         alt="Timeline"
+        loading="lazy"
+        decoding="async"
       />
     </div>
   );

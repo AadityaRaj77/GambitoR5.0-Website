@@ -44,7 +44,7 @@ function Footer() {
           className="w-[200px]"
           width={200}
           height={200}
-          src="logo2.svg"
+          src="/logo2.svg"
           alt="Gambitor Logo"
         />
         {/* Partner logos */}
@@ -81,7 +81,7 @@ function Footer() {
             className="w-10 hover:translate-y-[-0.1em]"
           >
             <Image
-              src="youtube.svg"
+              src="/youtube.svg"
               height={100}
               width={100}
               alt="youtube"
@@ -105,7 +105,7 @@ function Footer() {
             className="w-[250px] lg:w-[450px]"
             width={250}
             height={250}
-            src="logo2.svg"
+            src="/logo2.svg"
             alt="Gambtor Logo"
           />
         </div>
@@ -210,7 +210,7 @@ function Footer() {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <Image
-                    src="youtube.svg"
+                    src="/youtube.svg"
                     height={140}
                     width={100}
                     alt="youtube"

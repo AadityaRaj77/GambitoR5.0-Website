@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Header from "./_components/Header";
 import AboutSection from "./_components/AboutSection";
 import RoundDescription from "./_components/RoundDescription";
@@ -30,6 +29,8 @@ export default function Home() {
             backgroundPosition: 'top center',
           }}
         >
+          {/* Preload hint so the browser fetches the background SVG early */}
+          <link rel="preload" href="/fullbg.svg" as="image" />
           <div className="">
             <ScrollFade>
               <Header />
