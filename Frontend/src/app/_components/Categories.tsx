@@ -19,9 +19,11 @@ export default function Categories() {
     img: string,
     label: string,
     name: string,
-    fontSize: { label: string; name: string }
+    fontSize: { label: string; name: string },
+    key: string
   ) => (
     <div
+      key={key}
       className="absolute z-20 transform -translate-x-1/2 -translate-y-1/2"
       style={{ left: leftExpr, top: topExpr }}
     >
@@ -89,7 +91,7 @@ export default function Categories() {
             vertex(c.left, c.top, c.bg, c.img, c.label, c.name, {
               label: "min(3.5vw, 1rem)",
               name:  "min(5.5vw, 1.5rem)",
-            })
+            }, c.label)
           )}
         </div>
 
@@ -116,7 +118,7 @@ export default function Categories() {
             vertex(c.left, c.top, c.bg, c.img, c.label, c.name, {
               label: "clamp(0.6rem, 1.2vw, 1rem)",
               name:  "clamp(0.9rem, 1.8vw, 1.5rem)",
-            })
+            }, c.label)
           )}
         </div>
       </div>

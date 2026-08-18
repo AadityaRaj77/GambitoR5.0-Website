@@ -14,7 +14,6 @@ import Footer from "../_components/Footer";
 
 import OpenPage from "./OpenPage";
 import Testimonials from "../_components/Testimonials";
-import bg from "./assets/fullbg.svg";
 import ScrollFade from "./assets/ScrollFade";
 import NavBar from "./NavBar";
 
@@ -23,7 +22,7 @@ const Mobile = () => {
     <div
       className="overflow-x-hidden w-screen"
       style={{
-        backgroundImage: `url(${bg.src})`,
+        backgroundImage: `url('/fullbg-mobile.webp')`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "top center",

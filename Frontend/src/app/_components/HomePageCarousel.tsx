@@ -73,6 +73,7 @@ const HomePageCarousel: React.FC = () => {
               <img
                 src={slide.src}
                 alt={`Testimonial ${idx + 1}`}
+                loading={idx === 0 ? "eager" : "lazy"}
               style={{
                 position: 'absolute',
                 top: 0,
