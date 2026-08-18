@@ -7,7 +7,7 @@ export default function Timeline() {
       id="TIMELINE"
     >
       <Image
-        src="/timeline.svg"
+        src="/timeline.webp"
         width={894}
         height={2042}
         className="w-full h-auto px-2"

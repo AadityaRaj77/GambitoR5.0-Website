@@ -23,14 +23,14 @@ export default function Home() {
       ) : (
         <div
           style={{
-            backgroundImage: `url('/fullbg.svg')`,
+            backgroundImage: `url('/fullbg.webp')`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'top center',
           }}
         >
-          {/* Preload hint so the browser fetches the background SVG early */}
-          <link rel="preload" href="/fullbg.svg" as="image" />
+          {/* Preload hint so the browser fetches the background WebP early */}
+          <link rel="preload" href="/fullbg.webp" as="image" />
           <div className="">
             <ScrollFade>
               <Header />
