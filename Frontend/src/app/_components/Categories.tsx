@@ -59,7 +59,7 @@ export default function Categories() {
       id="CATEGORIES"
     >
       <div className="mb-12 text-center space-y-12">
-        <h1 className="text-[72px] sm:text-[72px] leading-[72px] sm:leading-[72px] my-2 font-normal font-dragon text-2xl bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent">
+        <h1 className="relative z-30 text-[72px] sm:text-[72px] leading-[72px] sm:leading-[72px] my-2 font-normal font-dragon text-2xl bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent">
           Categories
         </h1>
 
@@ -102,11 +102,13 @@ export default function Categories() {
             --bh: clamp(134px, 18vw, 202px)
         ══════════════════════════════════════════════════════ */}
         <div
-          className="relative hidden sm:block px-12 md:px-24 lg:px-32 h-[560px] md:h-[700px]"
+          className="relative hidden sm:block px-12 md:px-24 lg:px-32"
           style={{
             ["--r"  as string]: "clamp(120px, 22vw, 280px)",
             ["--bw" as string]: "clamp(160px, 22vw, 241px)",
             ["--bh" as string]: "clamp(134px, 18vw, 202px)",
+            // height = 2r + bh + 80px  →  ASTROX top-edge always lands ~40px inside the container
+            height: "calc(2 * clamp(120px, 22vw, 280px) + clamp(134px, 18vw, 202px) + 80px)",
           } as React.CSSProperties}
         >
           {/* Central badge — bigger on desktop */}

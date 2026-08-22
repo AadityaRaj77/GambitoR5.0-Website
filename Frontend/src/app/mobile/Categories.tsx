@@ -17,7 +17,7 @@ export default function Categories() {
       <div
         className="relative w-full"
         style={{
-          height: "min(92vw, 600px)",
+          height: "min(92vw, 800px)",
           ["--r" as any]: "min(35vw, 280px)",
           ["--bw" as any]: "min(30vw, 241px)",
           ["--bh" as any]: "min(28vw, 202px)",
