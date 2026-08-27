@@ -11,6 +11,7 @@ import Timeline from "./_components/Timeline";
 import { useMediaQuery } from "react-responsive";
 import Mobile from "./mobile/Mobile";
 import Testimonials from "./_components/Testimonials";
+import Partners from "./_components/Partners";
 import ScrollFade from "./_components/assets/ScrollFade";
 
 export default function Home() {
@@ -58,6 +59,9 @@ export default function Home() {
             </ScrollFade>
             <ScrollFade>
               <Testimonials />
+            </ScrollFade>
+            <ScrollFade>
+              <Partners />
             </ScrollFade>
           </div>
           <ScrollFade>
