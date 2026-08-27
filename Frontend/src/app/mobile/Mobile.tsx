@@ -14,6 +14,7 @@ import Footer from "../_components/Footer";
 
 import OpenPage from "./OpenPage";
 import Testimonials from "../_components/Testimonials";
+import Partners from "../_components/Partners";
 import ScrollFade from "./assets/ScrollFade";
 import NavBar from "./NavBar";
 
@@ -64,6 +65,10 @@ const Mobile = () => {
 
       <ScrollFade>
         <Testimonials></Testimonials>
+      </ScrollFade>
+
+      <ScrollFade>
+        <Partners />
       </ScrollFade>
 
       <ScrollFade>
