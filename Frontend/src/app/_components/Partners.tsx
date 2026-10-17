@@ -2,12 +2,23 @@ import React from "react";
 
 const partners = [
   {
+    name: "Neerja Modi School",
+    tagline: "as our Exclusive School Partner",
+    logo: "/partners/neerja-modi-school.png",
+    url: "https://www.nmsindia.org",
+  },
+  {
+    name: "Competishun",
+    tagline: "as our Digital Outreach Partner",
+    logo: "/partners/competishun.png",
+    url: "https://competishun.com",
+  },
+  {
     name: "School2Startup",
-    logo: "/partners/s2spartner.svg",
+    tagline: "",
+    logo: "/partners/school2startup.png",
     url: "https://school2startup.co.in",
   },
-  // Add more partners here when needed:
-  // { name: "Partner Name", logo: "/partners/partner2.svg", url: "https://partner2.com" },
 ];
 
 const Partners: React.FC = () => {
@@ -16,89 +27,43 @@ const Partners: React.FC = () => {
   return (
     <div
       id="PARTNERS"
-      className="relative z-[2] flex flex-col items-center py-12 mt-4 px-6"
+      className="relative z-[2] mt-4 flex flex-col items-center px-6 py-12"
     >
-      {/* Section Heading */}
-      <h1 className="text-[clamp(36px,8vw,72px)] font-normal font-dragon bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent mb-10">
+      <h1 className="mb-10 bg-gradient-to-b from-white to-[#999999] bg-clip-text text-[clamp(36px,8vw,72px)] font-normal text-transparent font-dragon">
         OUR PARTNERS
       </h1>
 
-      {/* Partner Cards - centered, wraps automatically when more are added */}
-      <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 max-w-5xl w-full">
-        {partners.map((partner, idx) => (
+      <div className="grid w-full max-w-5xl grid-cols-1 items-stretch justify-items-center gap-8 md:grid-cols-3 md:gap-6">
+        {partners.map((partner) => (
           <a
-            key={idx}
+            key={partner.name}
             href={partner.url}
             target="_blank"
             rel="noopener noreferrer"
             title={partner.name}
-            className="group transition-all duration-300 hover:scale-105"
-            style={{
-              /* Exact Figma outer card specs */
-              display: "flex",
-              width: "346px",
-              padding: "37px 12px 0 12px",
-              flexDirection: "column",
-              justifyContent: "flex-end",
-              alignItems: "center",
-              gap: "13px",
-              borderRadius: "10px",
-              background: "linear-gradient(0deg, rgba(255,255,255,0.30) 0%, rgba(255,255,255,0.30) 100%)",
-              textDecoration: "none",
-            }}
+            className="group flex w-full max-w-[346px] flex-col items-center rounded-[10px] bg-white/50 p-3 transition-transform duration-300 hover:scale-[1.02]"
           >
-            {/* Inner black logo box — exact Figma specs: 286×311, border-radius 10, bg #010001 */}
-            <div
-              style={{
-                width: "286px",
-                height: "311px",
-                borderRadius: "10px",
-                background: "#010001",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                overflow: "hidden",
-              }}
-            >
+            <div className="flex h-[220px] w-full items-center justify-center overflow-hidden p-3">
               <img
                 src={partner.logo}
-                alt={partner.name}
-                style={{
-                  width: "260px",
-                  height: "auto",
-                  maxHeight: "290px",
-                  objectFit: "contain",
-                }}
+                alt={`${partner.name} logo`}
+                className="h-full w-full object-contain"
               />
             </div>
 
-            {/* Partner name — exact Figma specs */}
-            <span
-              style={{
-                width: "322px",
-                height: "57px",
-                color: "#010001",
-                textAlign: "center",
-                fontFamily: "'Lekton', sans-serif",
-                fontSize: "40px",
-                fontStyle: "normal",
-                fontWeight: 700,
-                lineHeight: "normal",
-                letterSpacing: "1.2px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                paddingBottom: "13px",
-              }}
-            >
+            <span className="mt-4 text-center font-[Lekton,sans-serif] text-2xl font-bold tracking-wide text-[#010001] md:text-3xl">
               {partner.name}
             </span>
+            {partner.tagline && (
+              <span className="mt-1 min-h-12 text-center font-[Lekton,sans-serif] text-base text-[#010001] md:text-lg">
+                {partner.tagline}
+              </span>
+            )}
           </a>
         ))}
       </div>
 
-      {/* Divider */}
-      <div className="mt-12 w-[80%] max-w-2xl h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent" />
+      <div className="mt-12 h-px w-[80%] max-w-2xl bg-gradient-to-r from-transparent via-gray-600 to-transparent" />
     </div>
   );
 };
