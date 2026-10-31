@@ -154,9 +154,7 @@ function Footer() {
               MOCK PAPERS
             </a> */}
             <span className="hover:text-[#FAF4BE] cursor-default">PRACTICE PAPERS</span>
-            <Link href="/" className="hover:text-[#FAF4BE]">
-              FAQs
-            </Link>
+
           </div>
 
           {/* column 2 */}
